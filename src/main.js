@@ -1,15 +1,16 @@
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 //Visualizar data
 
 const pokemonData=data.pokemon;
 
-document.body.onload=addElement;
+//document.body.onload=addElement;
 
-function addElement(){
+document.addEventListener('load', addElement(pokemonData))
 
-  for(const pokemon of pokemonData) {
+function addElement(importedData){
+
+  for(const pokemon of importedData) {
 
     const pokemonCard=document.createElement('div'),
       cardContent=document.createTextNode(pokemon['num']),
