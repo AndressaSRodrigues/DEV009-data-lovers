@@ -13,14 +13,16 @@ function addElement(importedData){
   for(const pokemon of importedData) {
 
     const pokemonCard=document.createElement('div'),
-      cardContent=document.createTextNode(pokemon['num']),
+      cardName=document.createTextNode(pokemon['name']),
+      cardType=document.createTextNode(pokemon['type']),
       cardImage=document.createElement('img');
     cardImage.setAttribute("src", pokemon['img']);
-    cardImage.classList.add("images")
+    cardImage.classList.add("images");
     pokemonCard.classList.add("box");
     
-    pokemonCard.appendChild(cardContent);
+    pokemonCard.appendChild(cardName);
+    pokemonCard.appendChild(cardType);
+    pokemonCard.appendChild(cardImage);
     document.getElementById("container-pokemon").appendChild(pokemonCard); 
-    pokemonCard.appendChild(cardImage)
   }
 }
