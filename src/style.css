@@ -180,8 +180,99 @@ main {
     height: 200px;
     margin: 5px;
     border-radius: 20px;
+    display: grid;
 }
 
+.images {
+    margin-left: 10vw;
+}
+
+.images:hover {
+    width: 150px;
+    z-index: 999;
+}
+
+.grass {
+    background-image: url(assets/grass.png);
+}
+
+.water {
+    background-image: url(assets/water.png);
+}
+
+.fire {
+    background-image: url(assets/fire.png);
+}
+
+.ground {
+    background-image: url(assets/ground.png);
+}
+
+.electric {
+    background-image: url(assets/electric.png);
+}
+
+.poison {
+    background-image: url(assets/poison.png);
+}
+
+.bug {
+    background-image: url(assets/bug.png);
+}
+
+.fairy {
+    background-image: url(assets/fairy.png);
+}
+
+.psychic {
+    background-image: url(assets/psychic.png);
+}
+
+.normal {
+    background-image: url(assets/normal.png);
+}
+
+.steel {
+    background-image: url(assets/steel.png);
+}
+
+.dark {
+    background-image: url(assets/dark.png);
+}
+
+.fighting {
+    background-image: url(assets/fighting.png);
+}
+
+.flying {
+    background-image: url(assets/flying.png);
+}
+
+.ice {
+    background-image: url(assets/ice.png);
+}
+
+.rock {
+    background-image: url(assets/rock.png);
+}
+
+
+.grass, .water, .fire, .ground, .electric, .poison, .bug, .fairy, .psychic, .normal, .ghost, .steel, .dark, .fighting, .flying, .ice, .rock {
+    background-size: cover;
+}
+
+.name-style {
+    font-size: 20px;
+    font-family: 'Raleway';
+    text-align:start;
+    padding: 10px;
+}
+
+.type-style {
+    font-family: 'Raleway';
+    text-align: end;
+    padding: 10px;
+}
 
 .search {
     flex: 1;
