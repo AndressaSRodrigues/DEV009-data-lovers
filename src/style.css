@@ -166,12 +166,12 @@ main {
     height: 40px;
 }
 
-.view-pokemon {
+#container-pokemon {
     flex-direction: row;
     display: flex;
     flex-flow:row wrap;
     padding-top: 30px;
-}
+} 
 
 .box {
     border: 2px solid black;
