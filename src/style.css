@@ -174,7 +174,6 @@ main {
 } 
 
 .box {
-    border: 2px solid black;
     flex: 1;
     flex-basis:25%;
     height: 200px;
@@ -187,9 +186,8 @@ main {
     margin-left: 10vw;
 }
 
-.images:hover {
-    width: 150px;
-    z-index: 999;
+.box:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4)
 }
 
 .grass {
@@ -256,6 +254,14 @@ main {
     background-image: url(assets/rock.png);
 }
 
+.ghost {
+    background-image: url(assets/ghost.png);
+}
+
+.dragon {
+    background-image: url(assets/dragon.png);
+}
+
 
 .grass, .water, .fire, .ground, .electric, .poison, .bug, .fairy, .psychic, .normal, .ghost, .steel, .dark, .fighting, .flying, .ice, .rock {
     background-size: cover;
@@ -288,6 +294,7 @@ main {
 
 .search div input {
     border-style: none;
+    width: 175px;
 }
 
 .compare {
