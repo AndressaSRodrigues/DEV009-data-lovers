@@ -32,30 +32,29 @@
             <h2>All Pokémon</h2>
             <form class="process-data">
                 <section class="filter">
-                    <label>Filter</label>
-                    <button>Type<span class="material-symbols-outlined">add</span></button>
-                    <div>
-                        <ul class="list-type">
-                            <div><input type="checkbox" class="poke-type" value="bug"><li>Bug</li></div>
-                            <div><input type="checkbox" class="poke-type" value="dark"><li>Dark</li></div>
-                            <div><input type="checkbox" class="poke-type" value="dragon"><li>Dragon</li></div>
-                            <div><input type="checkbox" class="poke-type" value="electric"><li>Electric</li></div>
-                            <div><input type="checkbox" class="poke-type" value="fairy"><li>Fairy</li></div>
-                            <div><input type="checkbox" class="poke-type" value="fighting"><li>Fighting</li></div>
-                            <div><input type="checkbox" class="poke-type" value="fire"><li>Fire</li></div>
-                            <div><input type="checkbox" class="poke-type" value="flying"><li>Flying</li></div>
-                            <div><input type="checkbox" class="poke-type" value="ghost"><li>Ghost</li></div>
-                            <div><input type="checkbox" class="poke-type" value="grass"><li>Grass</li></div>
-                            <div><input type="checkbox" class="poke-type" value="ground"><li>Ground</li></div>
-                            <div><input type="checkbox" class="poke-type" value="ice"><li>Ice</li></div>
-                            <div><input type="checkbox" class="poke-type" value="normal"><li>Normal</li></div>
-                            <div><input type="checkbox" class="poke-type" value="poison"><li>Poison</li></div>
-                            <div><input type="checkbox" class="poke-type" value="psychic"><li>Psychic</li></div>
-                            <div><input type="checkbox" class="poke-type" value="rock"><li>Rock</li></div>
-                            <div><input type="checkbox" class="poke-type" value="steel"><li>Steel</li></div>
-                            <div><input type="checkbox" class="poke-type" value="water"><li>Water</li></div>
-                        </ul>
-                    </div>
+                    <p>Filter</p>
+                    <label for="select-types">Select by type</label>
+                        <select id="select-types">
+                            <option class="poke-type" value="all">All</option>
+                            <option class="poke-type" value="bug">Bug</option>
+                            <option class="poke-type" value="dark">Dark</option>
+                            <option class="poke-type" value="dragon">Dragon</option>
+                            <option class="poke-type" value="electric">Electric</option>
+                            <option class="poke-type" value="fairy">Fairy</option>
+                            <option class="poke-type" value="fighting">Fighting</option>
+                            <option class="poke-type" value="fire">Fire</option>
+                            <option class="poke-type" value="flying">Flying</option>
+                            <option class="poke-type" value="ghost">Ghost</option>
+                            <option class="poke-type" value="grass">Grass</option>
+                            <option class="poke-type" value="ground">Ground</option>
+                            <option class="poke-type" value="ice">Ice</option>
+                            <option class="poke-type" value="normal">Normal</option>
+                            <option class="poke-type" value="poison">Poison</option>
+                            <option class="poke-type" value="psychic">Psychic</option>
+                            <option class="poke-type" value="rock">Rock</option>
+                            <option class="poke-type" value="steel">Steel</option>
+                            <option class="poke-type" value="water">Water</option>
+                        </select>
                 </section>
                 <section class="sort">
                     <label for="sort-by">Sort by</label>
