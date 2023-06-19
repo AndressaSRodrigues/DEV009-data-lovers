@@ -45,7 +45,6 @@ header nav {
     padding: 15px;
 }
 
-
 header nav h3 {
     padding: 20px;
     color:#F2B807;
@@ -60,23 +59,20 @@ main {
 }
 
 .welcome {
+    color: #F2B807;
     height: 100vh;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    text-align: center;
 }
 
 .welcome h1{
-    text-align: center;
-    color: #F2B807;
     font-family:'Press Start 2P';
     font-size: 50px;
     margin-bottom: 15px;
 }
 
 .welcome p {
-    text-align: center;
-    color: #F2B807;
-    margin-top: 0px;
     margin-bottom: 40px;
     font-size: 18px;
 }
@@ -88,13 +84,11 @@ main {
 .options-welcome {
     display: flex;
     justify-content: space-around;
-
 }
 
 .options-welcome button {
     width: 121px;
     height: 51px;
-    text-align: center;
     border: 5px solid #F2B807;
     border-radius: 20px;
     font-size: 16px;
@@ -102,9 +96,7 @@ main {
     color: white;
     font-weight: 100;
     font-family: 'Raleway';
-    
 }
-
 
 #allpokemon {
     height: 100vh;
@@ -160,7 +152,6 @@ main {
     display: flex;
 }
 
-
 .sort {
     flex: 3;
     height: 40px;
@@ -190,82 +181,101 @@ main {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4)
 }
 
-.grass {
-    background-image: url(assets/grass.png);
-}
-
-.water {
-    background-image: url(assets/water.png);
-}
-
-.fire {
-    background-image: url(assets/fire.png);
-}
-
-.ground {
-    background-image: url(assets/ground.png);
-}
-
-.electric {
-    background-image: url(assets/electric.png);
-}
-
-.poison {
-    background-image: url(assets/poison.png);
-}
+/* Cards style */
 
 .bug {
     background-image: url(assets/bug.png);
-}
-
-.fairy {
-    background-image: url(assets/fairy.png);
-}
-
-.psychic {
-    background-image: url(assets/psychic.png);
-}
-
-.normal {
-    background-image: url(assets/normal.png);
-}
-
-.steel {
-    background-image: url(assets/steel.png);
 }
 
 .dark {
     background-image: url(assets/dark.png);
 }
 
+.dragon {
+    background-image: url(assets/dragon.png);
+}
+
+.electric {
+    background-image: url(assets/electric.png);
+}
+
+.fairy {
+    background-image: url(assets/fairy.png);
+}
+
 .fighting {
     background-image: url(assets/fighting.png);
+}
+
+.fire {
+    background-image: url(assets/fire.png);
 }
 
 .flying {
     background-image: url(assets/flying.png);
 }
 
+.ghost {
+    background-image: url(assets/ghost.png);
+}
+
+.grass {
+    background-image: url(assets/grass.png);
+}
+
+.ground {
+    background-image: url(assets/ground.png);
+}
+
 .ice {
     background-image: url(assets/ice.png);
+}
+
+.normal {
+    background-image: url(assets/normal.png);
+}
+
+.poison {
+    background-image: url(assets/poison.png);
+}
+
+.psychic {
+    background-image: url(assets/psychic.png);
 }
 
 .rock {
     background-image: url(assets/rock.png);
 }
 
-.ghost {
-    background-image: url(assets/ghost.png);
+.steel {
+    background-image: url(assets/steel.png);
 }
 
-.dragon {
-    background-image: url(assets/dragon.png);
+.water {
+    background-image: url(assets/water.png);
 }
 
-
-.grass, .water, .fire, .ground, .electric, .poison, .bug, .fairy, .psychic, .normal, .ghost, .steel, .dark, .fighting, .flying, .ice, .rock {
+.bug,
+.dark,
+.dragon,
+.electric,
+.fairy,
+.fighting,
+.fire,
+.flying,
+.ghost,
+.grass,
+.ground,
+.ice,
+.normal,
+.poison,
+.psychic,
+.rock,
+.steel,
+.water {
     background-size: cover;
 }
+
 
 .name-style {
     font-size: 20px;
