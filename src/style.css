@@ -45,7 +45,6 @@ header nav {
     padding: 15px;
 }
 
-
 header nav h3 {
     padding: 20px;
     color:#F2B807;
@@ -60,23 +59,20 @@ main {
 }
 
 .welcome {
+    color: #F2B807;
     height: 100vh;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    text-align: center;
 }
 
 .welcome h1{
-    text-align: center;
-    color: #F2B807;
     font-family:'Press Start 2P';
     font-size: 50px;
     margin-bottom: 15px;
 }
 
 .welcome p {
-    text-align: center;
-    color: #F2B807;
-    margin-top: 0px;
     margin-bottom: 40px;
     font-size: 18px;
 }
@@ -88,13 +84,11 @@ main {
 .options-welcome {
     display: flex;
     justify-content: space-around;
-
 }
 
 .options-welcome button {
     width: 121px;
     height: 51px;
-    text-align: center;
     border: 5px solid #F2B807;
     border-radius: 20px;
     font-size: 16px;
@@ -102,9 +96,7 @@ main {
     color: white;
     font-weight: 100;
     font-family: 'Raleway';
-    
 }
-
 
 #allpokemon {
     height: 100vh;
@@ -159,7 +151,6 @@ main {
 .list-type div {
     display: flex;
 }
-
 
 .sort {
     flex: 3;
