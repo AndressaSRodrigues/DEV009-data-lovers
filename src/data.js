@@ -1,24 +1,6 @@
-export function filterData(data, condition){;
+export const filterData = (data, pokemonType)=> {
 
-  let checksUser=[],
-      dataFiltrada=[];
-
-  for(let checkbox of condition) {
-      checkbox.addEventListener('click', function(){
-          if(this.checked == true){
-              (this.value);
-              checksUser.push(this.value);    
-
-              data.forEach((el)=>{
-                  (el['type'][0] === checksUser || el['type'][1] === checksUser)
-                  ? dataFiltrada=data.push(this.value)
-                  : dataFiltrada=dataFiltrada.filter(e => e !== this.value) 
-                  console.log(dataFiltrada)
-              }) 
-              
-          }else{
-              checksUser=checksUser.filter(e => e !== this.value)
-          }
-     }) 
-  }
+  const eachType = data.filter(pokemon => pokemon['type'][0] === pokemonType || pokemon['type'][1] === pokemonType )
+  console.log(eachType);
+  return eachType;
 }
