@@ -8,11 +8,11 @@ function addElement(importedData){
   for(const pokemon of importedData) {
 
     const pokemonCard=document.createElement('div'),
-    cardName=document.createTextNode(pokemon['name']),
-    cardType=document.createTextNode(pokemon['type']),
-    cardNameStyle=document.createElement('span'),
-    cardTypeStyle=document.createElement('span'),
-    cardImage=document.createElement('img');
+      cardName=document.createTextNode(pokemon['name']),
+      cardType=document.createTextNode(pokemon['type']),
+      cardNameStyle=document.createElement('span'),
+      cardTypeStyle=document.createElement('span'),
+      cardImage=document.createElement('img');
 
     cardImage.setAttribute("src", pokemon['img']);
     cardImage.classList.add("images");
@@ -28,13 +28,20 @@ function addElement(importedData){
     cardNameStyle.appendChild(cardName);
     cardTypeStyle.appendChild(cardType);
     document.getElementById("container-pokemon").appendChild(pokemonCard); 
-    }
-};
+  }
+}
 
 addElement(pokemonData)
 
-const pokemonTypes = document.getElementById('select-types');
-  pokemonTypes.addEventListener('change', (e) => {
-    console.log(pokemonTypes, e.target.value);
-});
+const filterTypes = document.getElementById('select-types');
+filterTypes.addEventListener('change', () => {
+  
+  const containerCards = document.getElementById("container-pokemon");
+  containerCards.innerHTML = " ";
 
+  if (filterTypes.value === "all") {
+    addElement(pokemonData);
+  } else {
+    addElement(filterData(pokemonData, filterTypes.value));
+  }
+});
