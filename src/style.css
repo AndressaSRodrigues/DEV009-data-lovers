@@ -3,15 +3,6 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
 body {
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -277,22 +268,24 @@ main {
     background-size: cover;
 }
 
+.name-style,
+.type-style {
+    color:white;
+    padding: 10px;
+    text-align:start;
+    text-shadow: 1px 1px 2px #0E1F40;
+}
 
 .name-style {
     font-size: 14px;
     font-family: 'Press Start 2P';
-    text-align:start;
     padding: 10px;
     margin: 3px;
-    color:white;
-    text-shadow: 1px 1px 2px #0E1F40;
 }
 
 .type-style {
     font-family: 'Raleway';
-    text-align: end;
-    padding: 10px;
-    margin: 3px;
+    margin: 0px 0px 15px 10px;
 }
 
 .search {
