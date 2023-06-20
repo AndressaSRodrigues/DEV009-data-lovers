@@ -98,6 +98,10 @@ main {
     font-family: 'Raleway';
 }
 
+.options-welcome button:hover {
+    cursor: pointer;
+}
+
 #allpokemon {
     height: 100vh;
     min-height: 100vh;
@@ -108,6 +112,7 @@ main {
     padding: 30px;
     color: white;
     font-family: 'Press Start 2P';
+    text-shadow: 1px 1px 1px black;
 
 }
 
@@ -122,39 +127,33 @@ main {
 .filter {
     flex: 1;
     width: 244px;
+    height: 100vh;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .filter label {
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.filter button{
-    border-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border-top:solid 1px black;
-    width:168px;
-    margin-left: 40px;
+#select-types, #select-weakness {
+    margin-bottom: 30px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 3px;
 }
 
-.list-type {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.list-type div {
-    display: flex;
-}
 
 .sort {
     flex: 3;
     height: 40px;
+}
+
+.sort-by {
+    width: 100px;
+    border-radius: 10px;
+    padding: 3px;
 }
 
 #container-pokemon {
@@ -167,6 +166,7 @@ main {
 .box {
     flex: 1;
     flex-basis:25%;
+    max-width: 350px;
     height: 200px;
     margin: 5px;
     border-radius: 20px;
@@ -178,7 +178,8 @@ main {
 }
 
 .box:hover {
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4)
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
 /* Cards style */
@@ -278,16 +279,20 @@ main {
 
 
 .name-style {
-    font-size: 20px;
-    font-family: 'Raleway';
+    font-size: 14px;
+    font-family: 'Press Start 2P';
     text-align:start;
     padding: 10px;
+    margin: 3px;
+    color:white;
+    text-shadow: 1px 1px 2px #0E1F40;
 }
 
 .type-style {
     font-family: 'Raleway';
     text-align: end;
     padding: 10px;
+    margin: 3px;
 }
 
 .search {

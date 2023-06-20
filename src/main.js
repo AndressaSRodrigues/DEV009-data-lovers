@@ -8,11 +8,13 @@ function addElement(importedData){
   for(const pokemon of importedData) {
 
     const pokemonCard=document.createElement('div'),
-      cardName=document.createTextNode(pokemon['name']),
-      cardType=document.createTextNode(pokemon['type']),
+      namePokemon=pokemon['name'],
+      cardName=document.createTextNode(namePokemon[0].toUpperCase()+namePokemon.substring(1)),
+      cardTypeArray=pokemon['type'].join( ", "),
+      cardType=document.createTextNode(cardTypeArray[0].toUpperCase()+cardTypeArray.substring(1)),
       cardNameStyle=document.createElement('span'),
       cardTypeStyle=document.createElement('span'),
-      cardImage=document.createElement('img');
+      cardImage=document.createElement('img')
 
     cardImage.setAttribute("src", pokemon['img']);
     cardImage.classList.add("images");
