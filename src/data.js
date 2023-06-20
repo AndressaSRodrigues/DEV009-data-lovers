@@ -1,17 +1,11 @@
 export const filterType = (data, pokemonType)=> {
 
-  const eachType = data.filter(pokemon => pokemon['type'][0] === pokemonType || pokemon['type'][1] === pokemonType )
-  console.log(eachType);
+  const eachType = data.filter(pokemon => pokemon['type'].includes(pokemonType));
   return eachType;
-}
+};
 
-export const filterResistance = (data, pokemonResistance)=> {
+export const filterWeakness = (data, pokemonWeakness) => {
+  const eachWeakness = data.filter(pokemon => pokemon['weaknesses'].includes(pokemonWeakness));
 
-  const eachResistance = pokemon.resistant;
-
-  for (let i=0; eachResistance.length < i; i++) {
-    data.filter(eachResistance) === pokemonResistance;
-  }
-  console.log(eachResistance);
-  return eachResistance;
-}
+  return eachWeakness;
+};
