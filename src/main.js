@@ -41,12 +41,11 @@ filterTypes.addEventListener('change', () => {
   const containerCards = document.getElementById("container-pokemon");
   containerCards.innerHTML = " ";
 
-  if (filterTypes.value === "all") {
-    addElement(pokemonData);
-  } else {
-    addElement(filterType(pokemonData, filterTypes.value));
-  }
+  (filterTypes.value === "all")
+    ? addElement(pokemonData)
+    : addElement(filterType(pokemonData, filterTypes.value));
 });
+
 
 const filterWeaknesses = document.getElementById('select-weakness');
 filterWeaknesses.addEventListener('change', () => {
@@ -54,9 +53,16 @@ filterWeaknesses.addEventListener('change', () => {
   const containerCards = document.getElementById("container-pokemon");
   containerCards.innerHTML = " ";
 
-  if (filterWeaknesses.value === "all") {
-    addElement(pokemonData);
-  } else {
-    addElement(filterWeakness(pokemonData, filterWeaknesses.value));
+  if (filterWeaknesses.value === "all"){
+
+    addElement(pokemonData)
+
+  }else if (filterWeaknesses.value === "normal"){
+
+    const noMatches= document.createTextNode("There are no matches for this type of weaknesses.");
+    document.getElementById("container-pokemon").appendChild(noMatches)
+
+  }else{
+    addElement(filterWeakness(pokemonData, filterWeaknesses.value))
   }
 });
