@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterType, filterResistance } from './data.js';
+import { filterType, filterWeakness } from './data.js';
 
 const pokemonData= data.pokemon;
 
@@ -46,15 +46,15 @@ filterTypes.addEventListener('change', () => {
   }
 });
 
-const filterResistances = document.getElementById('select-resistance');
-filterResistances.addEventListener('change', () => {
+const filterWeaknesses = document.getElementById('select-weakness');
+filterWeaknesses.addEventListener('change', () => {
 
   const containerCards = document.getElementById("container-pokemon");
   containerCards.innerHTML = " ";
 
-  if (filterResistance.value === "all") {
+  if (filterWeaknesses.value === "all") {
     addElement(pokemonData);
   } else {
-    addElement(filterResistance(pokemonData, filterResistance.value));
+    addElement(filterWeakness(pokemonData, filterWeaknesses.value));
   }
 });
