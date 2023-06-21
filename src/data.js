@@ -9,3 +9,9 @@ export const filterWeakness = (data, pokemonWeakness) => {
 
   return eachWeakness;
 };
+
+export const filterName = (data, pokemonName) => {
+  const eachName = data.filter(pokemon => pokemon['name'].includes(pokemonName.toLowerCase()));
+  
+  return eachName;
+};

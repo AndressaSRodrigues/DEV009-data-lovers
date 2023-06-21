@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterType, filterWeakness } from './data.js';
+import { filterType, filterWeakness, filterName } from './data.js';
 
 const pokemonData= data.pokemon;
 
@@ -64,5 +64,16 @@ filterWeaknesses.addEventListener('change', () => {
 
   }else{
     addElement(filterWeakness(pokemonData, filterWeaknesses.value))
+  }
+});
+
+const searchFilter=document.getElementById('search');
+searchFilter.addEventListener('keyup', ()=>{
+  const containerCards = document.getElementById("container-pokemon");
+  containerCards.innerHTML = " ";
+  if(searchFilter === ""){
+    addElement(pokemonData)
+  }else{
+    addElement(filterName(pokemonData, searchFilter.value))
   }
 });
