@@ -1,4 +1,4 @@
-import { filterType, filterWeakness } from '../src/data.js';
+import { filterType, filterWeakness, sortData } from '../src/data.js';
 
 const testData = [
   { name: 'bulbasaur', type: ['grass', 'poison'], weaknesses: ['fire', 'psychic', 'flying', 'ice']},
@@ -29,7 +29,8 @@ describe('filterWeakness', () => {
     expect(filteredData[0,1].weaknesses).toContain('ground');
   });
 });
-/*
+
+
 describe('sortData', () => {
   it('is a function', () => {
     expect(typeof sortData).toBe('function');
@@ -37,6 +38,11 @@ describe('sortData', () => {
 
   it('should return the pokemon sorted from A to Z', () => {
     const sortedData = sortData(testData, 'name', 'AZ');
-    expect(sortedData).toEqual(['bulbasaur', 'charmander', 'ivysaur', 'pikachu', 'squirtle']);
+    expect([sortedData[0].name,sortedData[1].name, sortedData[2].name, sortedData[3].name, sortedData[4].name ]).toEqual(['bulbasaur',  'charmander','ivysaur', 'pikachu', 'squirtle']);
   });
-});*/
+
+  it('should return the pokemon sorted from Z to A', () => {
+    const sortedData = sortData(testData, 'name', 'ZA');
+    expect([sortedData[0].name,sortedData[1].name, sortedData[2].name, sortedData[3].name, sortedData[4].name ]).toEqual(['squirtle', 'pikachu', 'ivysaur', 'charmander', 'bulbasaur']);
+  });
+});
