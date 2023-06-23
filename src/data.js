@@ -20,23 +20,23 @@ export const sortData=(data, sortBy, sortOrder)=>{
   const sortedData=[...data]
   if(sortOrder==="AZ"){
     sortedData.sort((a,b)=> a[sortBy].localeCompare(b[sortBy]));
-  }else if(sortOrder==="ZA"){
+  }else {
     sortedData.sort((a,b)=> b[sortBy].localeCompare(a[sortBy]));
   }
   return sortedData;
 };
 
-export const computeStats=(data) => {
+export const computedData=(data) => {
   const spawnChance = data.map(pokemon => pokemon['spawn-chance']),
     eachSpawnValue = (Object.values(spawnChance));
 
-  let sumaTotal=0;
+  let totalSum=0;
 
   for(let i=0; i<eachSpawnValue.length; i++){
     if(eachSpawnValue[i]!== null){
-      sumaTotal+=parseFloat(eachSpawnValue[i]);
+      totalSum+=parseFloat(eachSpawnValue[i]);
     }
   }
-  const promSpawn=(sumaTotal/spawnChance.length).toFixed(2);
-  return promSpawn;
-}
+  const averageSpawn=(totalSum/spawnChance.length).toFixed(2);
+  return averageSpawn;
+};
