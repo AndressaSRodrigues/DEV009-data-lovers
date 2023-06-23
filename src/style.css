@@ -326,3 +326,8 @@ main {
     color: #0E1F40;
     cursor: pointer;
 }
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}

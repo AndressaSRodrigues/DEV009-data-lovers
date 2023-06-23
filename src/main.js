@@ -1,5 +1,6 @@
 import data from './data/pokemon/pokemon.js';
 import { filterType, filterWeakness, filterName, sortData } from './data.js';
+import scrollTopButton from './scroll.js';
 
 const pokemonData= data.pokemon;
 const containerCards = document.getElementById("container-pokemon");
@@ -86,3 +87,7 @@ sortByName.addEventListener('change', () => {
   }
   
 });
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  scrollTopButton('.scroll-up')
+})
