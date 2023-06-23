@@ -15,3 +15,13 @@ export const filterName = (data, pokemonName) => {
   
   return eachName;
 };
+
+export const sortData=(data, sortBy, sortOrder)=>{
+  const sortedData=[...data]
+  if(sortOrder==="AZ"){
+    sortedData.sort((a,b)=> a[sortBy].localeCompare(b[sortBy]));
+  }else if(sortOrder==="ZA"){
+    sortedData.sort((a,b)=> b[sortBy].localeCompare(a[sortBy]));
+  }
+  return sortedData;
+};

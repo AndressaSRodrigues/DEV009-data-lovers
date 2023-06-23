@@ -12,7 +12,6 @@ describe('filterType', () => {
   it('is a function', () => {
     expect(typeof filterType).toBe('function');
   }); 
-
   it('should return only the Pokemon with the specified type', () => {
     const filteredData = filterType(testData, 'grass');
     expect(filteredData[0,1].type).toContain('grass');
@@ -21,7 +20,6 @@ describe('filterType', () => {
 });
 
 describe('filterWeakness', () => {
-  
   it('is a function', () => {
     expect(typeof filterWeakness).toBe('function');
   });
@@ -30,6 +28,15 @@ describe('filterWeakness', () => {
     const filteredData = filterWeakness(testData, 'ground');
     expect(filteredData[0,1].weaknesses).toContain('ground');
   });
-
 });
+/*
+describe('sortData', () => {
+  it('is a function', () => {
+    expect(typeof sortData).toBe('function');
+  });
 
+  it('should return the pokemon sorted from A to Z', () => {
+    const sortedData = sortData(testData, 'name', 'AZ');
+    expect(sortedData).toEqual(['bulbasaur', 'charmander', 'ivysaur', 'pikachu', 'squirtle']);
+  });
+});*/
