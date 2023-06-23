@@ -2,8 +2,11 @@ import data from './data/pokemon/pokemon.js';
 import { filterType, filterWeakness, filterName, sortData } from './data.js';
 
 const pokemonData= data.pokemon;
+const containerCards = document.getElementById("container-pokemon");
 
 function addElement(importedData){
+
+  containerCards.innerHTML = " ";
 
   for(const pokemon of importedData) {
 
@@ -29,7 +32,7 @@ function addElement(importedData){
     pokemonCard.appendChild(cardTypeStyle);
     cardNameStyle.appendChild(cardName);
     cardTypeStyle.appendChild(cardType);
-    document.getElementById("container-pokemon").appendChild(pokemonCard); 
+    containerCards.appendChild(pokemonCard); 
   }
 }
 
@@ -37,9 +40,6 @@ addElement(pokemonData)
 
 const filterTypes = document.getElementById('select-types');
 filterTypes.addEventListener('change', () => {
-
-  const containerCards = document.getElementById("container-pokemon");
-  containerCards.innerHTML = " ";
 
   (filterTypes.value === "all")
     ? addElement(pokemonData)
@@ -50,9 +50,6 @@ filterTypes.addEventListener('change', () => {
 const filterWeaknesses = document.getElementById('select-weakness');
 filterWeaknesses.addEventListener('change', () => {
 
-  const containerCards = document.getElementById("container-pokemon");
-  containerCards.innerHTML = " ";
-
   if (filterWeaknesses.value === "all"){
 
     addElement(pokemonData)
@@ -60,7 +57,7 @@ filterWeaknesses.addEventListener('change', () => {
   }else if (filterWeaknesses.value === "normal"){
 
     const noMatches= document.createTextNode("There are no matches for this type of weaknesses.");
-    document.getElementById("container-pokemon").appendChild(noMatches)
+    containerCards.appendChild(noMatches)
 
   }else{
     addElement(filterWeakness(pokemonData, filterWeaknesses.value))
@@ -69,8 +66,7 @@ filterWeaknesses.addEventListener('change', () => {
 
 const searchFilter=document.getElementById('search');
 searchFilter.addEventListener('keyup', ()=>{
-  const containerCards = document.getElementById("container-pokemon");
-  containerCards.innerHTML = " ";
+
   if(searchFilter === ""){
     addElement(pokemonData)
   }else{
@@ -80,8 +76,7 @@ searchFilter.addEventListener('keyup', ()=>{
 
 const sortByName = document.getElementById('sort-by-name');
 sortByName.addEventListener('change', () => {
-  const containerCards = document.getElementById("container-pokemon");
-  containerCards.innerHTML = " ";
+
   if (sortByName.value === "all") {
     addElement(pokemonData)
   } else if (sortByName.value === "a") {

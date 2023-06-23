@@ -38,7 +38,7 @@ describe('sortData', () => {
 
   it('should return the pokemon sorted from A to Z', () => {
     const sortedData = sortData(testData, 'name', 'AZ');
-    expect([sortedData[0].name,sortedData[1].name, sortedData[2].name, sortedData[3].name, sortedData[4].name ]).toEqual(['bulbasaur',  'charmander','ivysaur', 'pikachu', 'squirtle']);
+    expect([sortedData[0].name,sortedData[1].name, sortedData[2].name, sortedData[3].name, sortedData[4].name ]).toEqual(['bulbasaur', 'charmander', 'ivysaur', 'pikachu', 'squirtle']);
   });
 
   it('should return the pokemon sorted from Z to A', () => {
