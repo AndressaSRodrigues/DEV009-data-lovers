@@ -1,4 +1,4 @@
-import { filterType, filterWeakness, sortData } from '../src/data.js';
+import { filterType, filterWeakness, filterName, sortData } from '../src/data.js';
 
 const testData = [
   { name: 'bulbasaur', type: ['grass', 'poison'], weaknesses: ['fire', 'psychic', 'flying', 'ice']},
@@ -30,6 +30,21 @@ describe('filterWeakness', () => {
   });
 });
 
+describe('filterName', () => {
+  it('is a function', () => {
+    expect(typeof filterName).toBe('function');
+  });
+
+  it('should display the pokemon according to the search', () => {
+    const filterSearch = filterName(testData, 'pik');
+    expect(filterSearch[0].name).toContain('pikachu');
+  });
+
+  it('should display the pokemon according to the search', () => {
+    const filterSearch = filterName(testData, 'c');
+    expect(filterSearch[0].name).toContain('charmander');
+  });
+});
 
 describe('sortData', () => {
   it('is a function', () => {
