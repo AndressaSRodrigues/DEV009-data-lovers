@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterType, filterWeakness, filterName } from './data.js';
+import { filterType, filterWeakness, filterName, sortData } from './data.js';
 
 const pokemonData= data.pokemon;
 
@@ -76,4 +76,18 @@ searchFilter.addEventListener('keyup', ()=>{
   }else{
     addElement(filterName(pokemonData, searchFilter.value))
   }
+});
+
+const sortByName = document.getElementById('sort-by-name');
+sortByName.addEventListener('change', () => {
+  const containerCards = document.getElementById("container-pokemon");
+  containerCards.innerHTML = " ";
+  if (sortByName.value === "all") {
+    addElement(pokemonData)
+  } else if (sortByName.value === "a") {
+    addElement(sortData(pokemonData, "name", "AZ"));
+  } else if (sortByName.value === "z") {
+    addElement(sortData(pokemonData, "name", "ZA"));
+  }
+  
 });
