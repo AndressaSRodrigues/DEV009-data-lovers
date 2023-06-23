@@ -25,3 +25,18 @@ export const sortData=(data, sortBy, sortOrder)=>{
   }
   return sortedData;
 };
+
+export const computeStats=(data) => {
+  const spawnChance = data.map(pokemon => pokemon['spawn-chance']),
+    eachSpawnValue = (Object.values(spawnChance));
+
+  let sumaTotal=0;
+
+  for(let i=0; i<eachSpawnValue.length; i++){
+    if(eachSpawnValue[i]!== null){
+      sumaTotal+=parseFloat(eachSpawnValue[i]);
+    }
+  }
+  const promSpawn=(sumaTotal/spawnChance.length).toFixed(2);
+  return promSpawn;
+}

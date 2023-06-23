@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterType, filterWeakness, filterName, sortData } from './data.js';
+import { filterType, filterWeakness, filterName, sortData, computeStats } from './data.js';
 import scrollTopButton from './scroll.js';
 
 const pokemonData= data.pokemon;
@@ -45,6 +45,10 @@ filterTypes.addEventListener('change', () => {
   (filterTypes.value === "all")
     ? addElement(pokemonData)
     : addElement(filterType(pokemonData, filterTypes.value));
+
+  const averageSpawn=computeStats(filterType(pokemonData, filterTypes.value)),
+    spawnMessage=document.getElementById('spawn-message');
+  spawnMessage.innerHTML=`El promedio de aparición de este tipo de Pokemon es ${averageSpawn}`
 });
 
 
