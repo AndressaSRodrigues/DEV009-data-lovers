@@ -6,6 +6,10 @@ const pokemonData= data.pokemon;
 const containerCards = document.getElementById("container-pokemon");
 const spawnMessage=document.getElementById('spawn-message');
 
+const modal=document.getElementById('container-modal'),
+  spanContent=document.getElementsByClassName('close')[0],
+  propiedades=document.querySelector('.property');
+
 function addElement(importedData){
 
   containerCards.innerHTML = " ";
@@ -35,7 +39,23 @@ function addElement(importedData){
     pokemonCard.appendChild(cardTypeStyle);
     cardNameStyle.appendChild(cardName);
     cardTypeStyle.appendChild(cardType);
-    containerCards.appendChild(pokemonCard); 
+    containerCards.appendChild(pokemonCard);
+
+
+    pokemonCard.addEventListener('click', function(){
+      modal.style.display='block'
+      propiedades.innerHTML=`${pokemon['weaknesses']}`;
+    })
+  }
+}
+
+spanContent.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
   }
 }
 
@@ -99,3 +119,4 @@ sortByName.addEventListener('change', () => {
 document.addEventListener('DOMContentLoaded', ()=>{
   scrollTopButton('.scroll-up')
 })
+
