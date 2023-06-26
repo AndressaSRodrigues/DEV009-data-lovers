@@ -4,10 +4,12 @@ import scrollTopButton from './scroll.js';
 
 const pokemonData= data.pokemon;
 const containerCards = document.getElementById("container-pokemon");
+const spawnMessage=document.getElementById('spawn-message');
 
 function addElement(importedData){
 
   containerCards.innerHTML = " ";
+  spawnMessage.innerHTML= " ";
 
   for(const pokemon of importedData) {
 
@@ -42,13 +44,15 @@ addElement(pokemonData)
 const filterTypes = document.getElementById('select-types');
 filterTypes.addEventListener('change', () => {
 
-  (filterTypes.value === "all")
-    ? addElement(pokemonData)
-    : addElement(filterType(pokemonData, filterTypes.value));
-
-  const averageSpawn=computedData(filterType(pokemonData, filterTypes.value)),
-    spawnMessage=document.getElementById('spawn-message');
-  spawnMessage.innerHTML=`The average spawn rate of this type is ${averageSpawn}.`
+  if (filterTypes.value === "all"){
+    addElement(pokemonData);
+    spawnMessage.innerHTML=" ";
+  } else {
+    addElement(filterType(pokemonData, filterTypes.value));
+    const averageSpawn=computedData(filterType(pokemonData, filterTypes.value)),
+      spawnMessage=document.getElementById('spawn-message');
+    spawnMessage.innerHTML=`The average spawn chance for this type is ${averageSpawn}`
+  }
 });
 
 
@@ -61,7 +65,7 @@ filterWeaknesses.addEventListener('change', () => {
 
   }else if (filterWeaknesses.value === "normal"){
 
-    const noMatches= document.createTextNode("There are no matches for this type of weaknesses.");
+    const noMatches= document.createTextNode("There are no matches for this type of weakness.");
     containerCards.appendChild(noMatches)
 
   }else{
