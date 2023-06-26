@@ -1,13 +1,13 @@
 export default function scrollTopButton(btn) {
-  const $scrollBtn = document.querySelector(btn);
+  const scrollBtn = document.querySelector(btn);
 
   window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
     if(scrollTop > 600) {
-      $scrollBtn.classList.remove("hidden");
+      scrollBtn.classList.remove("hidden");
     }else {
-      $scrollBtn.classList.add("hidden");
+      scrollBtn.classList.add("hidden");
     }
   });
 
