@@ -79,12 +79,12 @@ main {
 }
 
 .options-welcome button {
-    width: 121px;
+    width: 150px;
     height: 51px;
     border: 5px solid #F2B807;
     border-radius: 20px;
     font-size: 16px;
-    background-color:transparent;
+    background-color:#0E1F40;
     color: white;
     font-weight: 100;
     font-family: 'Raleway';
