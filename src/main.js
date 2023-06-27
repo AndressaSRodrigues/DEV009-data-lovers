@@ -49,7 +49,7 @@ function addElement(importedData){
       const statsArray= pokemon.stats;
       const statsInfo = Object.entries(statsArray).join("<br>");
       const modalName= (namePokemon[0].toUpperCase()+namePokemon.substring(1));
-      propiedades.innerHTML=`<h3>${modalName}</h3><br><br>
+      propiedades.innerHTML=`<h3>${modalName}</h3><br>
       <b>Weaknesses</b><br>${weakArray}<br><br>
       <b>Resistant<br></b>${resistantArray}<br><br>
       <b>Stats</b><br>${statsInfo}`;
