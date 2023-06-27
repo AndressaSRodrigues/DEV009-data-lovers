@@ -3,8 +3,8 @@ import { filterType, filterWeakness, filterName, sortData, computedData } from '
 import scrollTopButton from './scroll.js';
 
 const pokemonData= data.pokemon;
-const containerCards = document.getElementById("container-pokemon");
-const spawnMessage=document.getElementById('spawn-message');
+const containerCards= document.getElementById("container-pokemon");
+const spawnMessage= document.getElementById('spawn-message');
 
 const modal=document.getElementById('container-modal'),
   spanContent=document.getElementsByClassName('close')[0],
@@ -41,16 +41,29 @@ function addElement(importedData){
     cardTypeStyle.appendChild(cardType);
     containerCards.appendChild(pokemonCard);
 
-
+    
     pokemonCard.addEventListener('click', function(){
-      modal.style.display='block'
-      propiedades.innerHTML=`${pokemon['weaknesses']}`;
+      modal.style.display='block';
+      const weakArray= pokemon['weaknesses'].join( ", ");
+      const resistantArray= pokemon['resistant'].join( ", ");
+      const statsArray= pokemon.stats;
+      const statsInfo = Object.entries(statsArray).join("<br>");
+      const modalName= (namePokemon[0].toUpperCase()+namePokemon.substring(1));
+      propiedades.innerHTML=`<h3>${modalName}</h3><br><br>
+      <b>Weaknesses</b><br>${weakArray}<br><br>
+      <b>Resistant<br></b>${resistantArray}<br><br>
+      <b>Stats</b><br>${statsInfo}`;
+      document.getElementById('modal-image').src = pokemon['img'];
+      const modalContent = document.getElementById('modal-content');
+      modalContent.className = '';
+      modalContent.classList.add(pokemon['type'][0]);
     })
   }
 }
 
 spanContent.onclick = function() {
   modal.style.display = "none";
+  containerCards.style.filter= "none";
 }
 
 window.onclick = function(event) {
