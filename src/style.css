@@ -361,13 +361,13 @@ main {
     color: white;
     text-shadow: 1px 1px 2px #0E1F40;
     margin: auto;
-    padding: 20px;
+    padding: 0 20px;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
     background-color: aliceblue;
-    width: 20vw;
+    width: 25vw;
     height: 65vh;
   }
 
@@ -382,17 +382,17 @@ main {
 
   #modal-image {
     align-self: flex-end;
-    justify-content: center; 
     align-items: center;
     width: 180px;
+    padding-bottom: 10px;
   }
 
   .close {
     color: white;
-    float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
-    align-self: flex-end;
+    align-self: flex-start;
+    align-items: end;
   }
   
   .close:hover,
