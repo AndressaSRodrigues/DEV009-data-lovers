@@ -57,6 +57,7 @@ function addElement(importedData){
       const modalContent = document.getElementById('modal-content');
       modalContent.className = '';
       modalContent.classList.add(pokemon['type'][0]);
+      containerCards.style.filter= "blur(3px)";
     })
   }
 }
