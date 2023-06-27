@@ -352,7 +352,6 @@ main {
     transform: translate(-50%, -50%);
     width: 400px;
     border-radius: 20px;
-    backdrop-filter: blur(3px);
 }
 
 #modal-content {
@@ -368,6 +367,11 @@ main {
 
   .property {
     align-self: flex-start;
+  }
+
+  .property h3 {
+    font-size: 20px;
+    font-family: 'Press Start 2P';
   }
 
   #modal-image {
