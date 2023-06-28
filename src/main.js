@@ -133,7 +133,7 @@ sortByName.addEventListener('change', () => {
 
 document.addEventListener('DOMContentLoaded', ()=>{
   scrollTopButton('.scroll-up');
-  if(screen.width<=375 || screen.width<=851){
+  if(screen.width<=375 || screen.width<=851 || screen.width<=414){
     botonFilter('.filter', '#display-filter');
     slideFilter('.filter', '#select-types', '#select-weakness');
   }
