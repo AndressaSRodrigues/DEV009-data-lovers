@@ -1,6 +1,8 @@
 import data from './data/pokemon/pokemon.js';
 import { filterType, filterWeakness, filterName, sortData, computedData } from './data.js';
 import scrollTopButton from './scroll.js';
+import { botonFilter } from './boton.js';
+import { slideFilter } from './boton.js';
 
 const pokemonData= data.pokemon;
 const containerCards= document.getElementById("container-pokemon");
@@ -130,32 +132,12 @@ sortByName.addEventListener('change', () => {
 });
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  scrollTopButton('.scroll-up')
-})
-
-const botonAbrir=document.getElementById("display-filter"),
-  sectionFilter=document.querySelector('.filter');
-
-botonAbrir.addEventListener('click', function(){
-
-  if(sectionFilter.style.display==="none"){
-    sectionFilter.style.display="block";
-  }else{
-    sectionFilter.style.display="none";
+  scrollTopButton('.scroll-up');
+  if(screen.width<=360){
+    botonFilter('.filter', '#display-filter');
+    slideFilter('.filter', '#select-types', '#select-weakness');
   }
 })
-
-const selectTypes=document.getElementById('select-types'),
-  selectWeaknesses=document.getElementById('select-weakness');
-
-selectTypes.addEventListener('change', ()=>{
-  sectionFilter.style.display="none"
-})
-
-selectWeaknesses.addEventListener('change', ()=>{
-  sectionFilter.style.display="none"
-})
-
 
 
 
