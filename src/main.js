@@ -137,7 +137,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
     botonFilter('.filter', '#display-filter');
     slideFilter('.filter', '#select-types', '#select-weakness');
   }
-})
-
-
-
+});
