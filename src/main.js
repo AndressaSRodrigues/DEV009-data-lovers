@@ -133,3 +133,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
   scrollTopButton('.scroll-up')
 })
 
+const botonAbrir=document.getElementById("display-filter"),
+  sectionFilter=document.querySelector('.filter');
+
+botonAbrir.addEventListener('click', function(){
+
+  if(sectionFilter.style.display==="none"){
+    sectionFilter.style.display="block";
+  }else{
+    sectionFilter.style.display="none";
+  }
+})
+
+const selectTypes=document.getElementById('select-types'),
+  selectWeaknesses=document.getElementById('select-weakness');
+
+selectTypes.addEventListener('change', ()=>{
+  sectionFilter.style.display="none"
+})
+
+selectWeaknesses.addEventListener('change', ()=>{
+  sectionFilter.style.display="none"
+})
+
+
+
+

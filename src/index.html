@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +14,7 @@
     <header>
         <img src="assets/logo-pokemon.png">
         <nav>
-            <h3><a href="#allpokemon">POKEMONS</a></h3>
+            <h3><a href="#allpokemon">POKEMON</a></h3>
         </nav>
     </header>
     <main>
@@ -29,9 +30,10 @@
         <section  id="allpokemon">
             <h2>All Pokémon</h2>
             <form class="process-data">
+                <button type="button" id="display-filter">Filter</button>
                 <section class="filter">
                     <h3>Select</h3>
-                    <label for="select-types">By its type</label>
+                        <label for="select-types" class="types">By its type</label>
                         <select id="select-types">
                             <option value="all">All</option>
                             <option value="bug">Bug</option>
@@ -84,7 +86,8 @@
                         <option value="z">Z-A</option>
                     </select>
                     <p id="spawn-message"></p>
-                <section id="container-pokemon"></section>
+                    <section id="container-pokemon"></section>
+                </section>
                 <div id="container-modal" class="modal">
                     <div id="modal-content">
                         <p class="property"></p>
@@ -92,7 +95,6 @@
                         <span class="close">&times;</span>
                     </div>
                 </div>
-                </section>
                 <section class="search">
                     <div>
                         <span class="material-symbols-outlined">search</span>
