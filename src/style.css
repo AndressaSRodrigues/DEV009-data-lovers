@@ -511,32 +511,36 @@ main {
         color: black;
         font-size: 14px;
         width: 85vw;
-        height: 25px;
+        height: 30px;
         border-radius: 20px;
         margin-top: 10px;
         margin-bottom: 15px;
         padding-top: 2px;
-        flex-shrink: 1;
         z-index: 999;
         border: 1px solid black;
+        background-color: transparent;
         order: 2;
     }
 
     .filter {
+        display: none;
         position: absolute;
-        top: 150vh;
-        height: 70%;
-        width: 100%;
+        top: 148vh;
+        height: 40%;
+        width: 85%;
         max-width: 100vw;
         background-color:#0E1F40;
+        border-radius: 0px 0px 20px 20px;
         margin: 0px;
         opacity: 0.9;
         color:#F2B807;
-        z-index: 999; 
+        z-index: 999;
+        text-align: center;
+    }
+
+    #select-types, #select-weakness {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        margin: 0 auto;
     }
 
     .types {
@@ -601,16 +605,6 @@ main {
     #modal-content img {
         width: 90px;
     }
-
-    #display-filter {
-        display: block;
-    }
-
-    .filter {
-        display: none;
-    }
-
-
 }
 
 
