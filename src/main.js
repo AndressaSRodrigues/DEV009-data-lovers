@@ -1,8 +1,43 @@
 import data from './data/pokemon/pokemon.js';
 import { filterType, filterWeakness, filterName, sortData, computedData } from './data.js';
 import scrollTopButton from './scroll.js';
-import { botonFilter } from './boton.js';
-import { slideFilter } from './boton.js';
+/*import { botonFilter } from './boton.js';
+import { slideFilter } from './boton.js';*/
+
+
+const filterBtn = document.getElementById('display-filter');
+const sectionFilter= document.querySelector('.filter');
+
+scrollTopButton('.scroll-up');
+
+  if(screen.width<=851){
+    filterBtn.addEventListener('click', ()=>{
+      console.log('hello');
+      if(sectionFilter.style.display==="none"){
+        sectionFilter.style.display="block";
+      }else{
+        sectionFilter.style.display="none";
+      }
+  
+    }) 
+    slideFilter('.filter', '#select-types', '#select-weakness');
+  }
+
+
+function slideFilter(section, selectType, selectWeakness){
+  const selectTypes=document.querySelector(selectType),
+    selectWeaknesses=document.querySelector(selectWeakness),
+    sectionFilter=document.querySelector(section);
+
+  selectTypes.addEventListener('change', ()=>{
+    sectionFilter.style.display="none";
+  })
+
+  selectWeaknesses.addEventListener('change', ()=>{
+    sectionFilter.style.display="none";
+  })
+}
+
 
 const pokemonData= data.pokemon;
 const containerCards= document.getElementById("container-pokemon");
@@ -129,12 +164,4 @@ sortByName.addEventListener('change', () => {
     addElement(sortData(pokemonData, "name", "ZA"));
   }
   
-});
-
-document.addEventListener('DOMContentLoaded', ()=>{
-  scrollTopButton('.scroll-up');
-  if(screen.width<=375 || screen.width<=851 || screen.width<=414){
-    botonFilter('.filter', '#display-filter');
-    slideFilter('.filter', '#select-types', '#select-weakness');
-  }
 });

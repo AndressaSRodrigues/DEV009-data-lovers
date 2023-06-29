@@ -19,11 +19,11 @@ export function slideFilter(section, selectType, selectWeakness){
     sectionFilter=document.querySelector(section);
 
   selectTypes.addEventListener('change', ()=>{
-    sectionFilter.style.display="none"
+    sectionFilter.style.display="none";
   })
 
   selectWeaknesses.addEventListener('change', ()=>{
-    sectionFilter.style.display="none"
+    sectionFilter.style.display="none";
   })
 }
 
