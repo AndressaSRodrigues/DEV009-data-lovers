@@ -1,59 +1,23 @@
 import data from './data/pokemon/pokemon.js';
 import { filterType, filterWeakness, filterName, sortData, computedData } from './data.js';
 import scrollTopButton from './scroll.js';
-/*import { botonFilter } from './boton.js';
-import { slideFilter } from './boton.js';*/
+import { displayButton, slideFilter } from './displayFilterBtn.js';
 
+const pokemonData = data.pokemon;
 
-const filterBtn = document.getElementById('display-filter');
-const sectionFilter= document.querySelector('.filter');
-
-scrollTopButton('.scroll-up');
-
-  if(screen.width<=851){
-    filterBtn.addEventListener('click', ()=>{
-      console.log('hello');
-      if(sectionFilter.style.display==="none"){
-        sectionFilter.style.display="block";
-      }else{
-        sectionFilter.style.display="none";
-      }
-  
-    }) 
-    slideFilter('.filter', '#select-types', '#select-weakness');
-  }
-
-
-function slideFilter(section, selectType, selectWeakness){
-  const selectTypes=document.querySelector(selectType),
-    selectWeaknesses=document.querySelector(selectWeakness),
-    sectionFilter=document.querySelector(section);
-
-  selectTypes.addEventListener('change', ()=>{
-    sectionFilter.style.display="none";
-  })
-
-  selectWeaknesses.addEventListener('change', ()=>{
-    sectionFilter.style.display="none";
-  })
-}
-
-
-const pokemonData= data.pokemon;
-const containerCards= document.getElementById("container-pokemon");
-const spawnMessage= document.getElementById('spawn-message');
+const containerCards = document.getElementById("container-pokemon");
+const spawnMessage = document.getElementById('spawn-message');
 
 const modal=document.getElementById('container-modal'),
-  spanContent=document.getElementsByClassName('close')[0],
-  propiedades=document.querySelector('.property');
+  modalClose=document.getElementsByClassName('close')[0],
+  modalText=document.querySelector('.modal-text');
 
 function addElement(importedData){
-
   containerCards.innerHTML = " ";
   spawnMessage.innerHTML= " ";
 
   for(const pokemon of importedData) {
-
+    
     const pokemonCard=document.createElement('div'),
       namePokemon=pokemon['name'],
       cardName=document.createTextNode(namePokemon[0].toUpperCase()+namePokemon.substring(1)),
@@ -61,16 +25,15 @@ function addElement(importedData){
       cardType=document.createTextNode(cardTypeArray[0].toUpperCase()+cardTypeArray.substring(1)),
       cardNameStyle=document.createElement('span'),
       cardTypeStyle=document.createElement('span'),
-      cardImage=document.createElement('img')
+      cardImage=document.createElement('img');
 
     cardImage.setAttribute("src", pokemon['img']);
     cardImage.classList.add("images");
     pokemonCard.classList.add("box");
     cardNameStyle.classList.add("name-style");
     cardTypeStyle.classList.add("type-style");
-
     pokemonCard.classList.add(pokemon['type'][0]);
-
+    
     pokemonCard.appendChild(cardNameStyle);
     pokemonCard.appendChild(cardImage);
     pokemonCard.appendChild(cardTypeStyle);
@@ -78,7 +41,6 @@ function addElement(importedData){
     cardTypeStyle.appendChild(cardType);
     containerCards.appendChild(pokemonCard);
 
-    
     pokemonCard.addEventListener('click', function(){
       modal.style.display='block';
       const weakArray= pokemon['weaknesses'].join( ", ");
@@ -86,10 +48,11 @@ function addElement(importedData){
       const statsArray= pokemon.stats;
       const statsInfo = Object.entries(statsArray).join("<br>");
       const modalName= (namePokemon[0].toUpperCase()+namePokemon.substring(1));
-      propiedades.innerHTML=`<h3>${modalName}</h3><br>
+      modalText.innerHTML=`<h3>${modalName}</h3><br>
       <b>Weaknesses</b><br>${weakArray}<br><br>
       <b>Resistant<br></b>${resistantArray}<br><br>
       <b>Stats</b><br>${statsInfo}`;
+
       document.getElementById('modal-image').src = pokemon['img'];
       const modalContent = document.getElementById('modal-content');
       modalContent.className = '';
@@ -98,7 +61,7 @@ function addElement(importedData){
   }
 }
 
-spanContent.onclick = function() {
+modalClose.onclick = function() {
   modal.style.display = "none";
   containerCards.style.filter= "none";
 }
@@ -113,7 +76,7 @@ addElement(pokemonData)
 
 const filterTypes = document.getElementById('select-types');
 filterTypes.addEventListener('change', () => {
-
+  
   if (filterTypes.value === "all"){
     addElement(pokemonData);
     spawnMessage.innerHTML=" ";
@@ -125,19 +88,14 @@ filterTypes.addEventListener('change', () => {
   }
 });
 
-
 const filterWeaknesses = document.getElementById('select-weakness');
 filterWeaknesses.addEventListener('change', () => {
-
+  
   if (filterWeaknesses.value === "all"){
-
     addElement(pokemonData)
-
   }else if (filterWeaknesses.value === "normal"){
-
     const noMatches= document.createTextNode("There are no matches for this type of weakness.");
     containerCards.appendChild(noMatches)
-
   }else{
     addElement(filterWeakness(pokemonData, filterWeaknesses.value))
   }
@@ -145,7 +103,7 @@ filterWeaknesses.addEventListener('change', () => {
 
 const searchFilter=document.getElementById('search');
 searchFilter.addEventListener('keyup', ()=>{
-
+  
   if(searchFilter === ""){
     addElement(pokemonData)
   }else{
@@ -155,7 +113,7 @@ searchFilter.addEventListener('keyup', ()=>{
 
 const sortByName = document.getElementById('sort-by-name');
 sortByName.addEventListener('change', () => {
-
+  
   if (sortByName.value === "all") {
     addElement(pokemonData)
   } else if (sortByName.value === "a") {
@@ -163,5 +121,14 @@ sortByName.addEventListener('change', () => {
   } else if (sortByName.value === "z") {
     addElement(sortData(pokemonData, "name", "ZA"));
   }
+});
+
+document.addEventListener('DOMContentLoaded', ()=>{
   
+  scrollTopButton('.scroll-up');
+  
+  if(screen.width <= 851){
+    displayButton('.filter', '#display-filter');
+    slideFilter('.filter', '#select-types', '#select-weakness');
+  }
 });

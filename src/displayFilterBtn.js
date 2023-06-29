@@ -1,4 +1,4 @@
-export function botonFilter(section,btn){
+export function displayButton (section, btn){
   const filterBtn = document.querySelector(btn),
     sectionFilter= document.querySelector(section);
     
@@ -26,4 +26,3 @@ export function slideFilter(section, selectType, selectWeakness){
     sectionFilter.style.display="none";
   })
 }
-
