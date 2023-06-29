@@ -696,6 +696,25 @@ main {
 
     .search {
         order: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #search {
+        border: 1px solid black;
+        border-radius: 20px;
+        width: 100vw;
+        height: 35px;
+    }
+
+    .search div {
+        border: none;
+    }
+
+    .material-symbols-outlined {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
     }
 
     .filter {
@@ -734,7 +753,7 @@ main {
         color: black;
         font-size: 18px;
         font-family: 'Raleway';
-        width: 88vw;
+        width: 86vw;
         height: 35px;
         border-radius: 20px;
         margin-top: 10px;
