@@ -13,122 +13,111 @@
 
 ## 1. Definición del producto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
+[Pokémon Lovers](https://andressasrodrigues.github.io/DEV009-data-lovers/src/) es un sitio web dedicado a los amantes de Pokémon, donde los usuarios pueden buscar, explorar y conocer las características de diferentes Pokémon. El sitio web está diseñado para brindar una experiencia interactiva y educativa, permitiendo a los usuarios filtrar los Pokémon por tipo y debilidades, ordenarlos alfabéticamente y realizar búsquedas por nombre.
 
+### Características principales
+Visualización de Pokémon: Los usuarios pueden explorar una amplia selección de Pokémon, donde se muestra información esencial como el nombre y los tipos de cada uno.
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+* Filtrado por tipo y debilidades: Los jugadores principiantes y experimentados pueden filtrar los Pokémon según su tipo y debilidades, lo que les ayuda a tomar decisiones estratégicas al elegir el mejor Pokémon para una batalla.
+
+* Orden alfabético: Los Pokémon se pueden ordenar de forma ascendente y descendente según sus nombres, lo que facilita la búsqueda y comparación de diferentes especies.
+
+* Búsqueda por nombre: Los usuarios pueden utilizar la función de búsqueda para encontrar rápidamente un Pokémon específico ingresando su nombre.
+
+### Público objetivo
+El sitio web está dirigido a personas aficionadas a Pokémon y a aquellos que disfrutan jugar en línea a través de sus dispositivos móviles y ordenadores. Desde nuevos jugadores que desean aprender sobre los Pokémon hasta jugadores experimentados que buscan información detallada para tomar decisiones estratégicas, el sitio web ofrece un recurso valioso para todos los niveles de experiencia.
+
+### Tecnologías utilizadas
+El proyecto utiliza HTML y CSS para la estructura y el diseño del sitio web. Además, se implementan funciones interactivas utilizando JavaScript para permitir la filtración, ordenación y búsqueda de los Pokémon. Los datos se importan y se gestionan mediante técnicas de manipulación de objetos y arrays en JavaScript.
+
 
 ## 2. Historias de usuario
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
+### Historia de usuario 1 (Newbie)
+
+Yo Juan, como nuevo jugador, quiero visualizar los diferentes tipos de Pokémon, para comenzar a jugar.
+
+#### Criterios de aceptación:
+* El usuario al ingresar a la aplicación encontrará el vector que corresponde a algunos de los Pokémon.
+* El usuario visualizará la información de sus principales características: nombre y tipos.
+
+#### Definición de terminado: 
+* El código pasa los test necesarios (Uso de HTML semántico y CSS).
+* Se importó correctamente la data.
+* La página web es responsive.
+
+### Historia de usuario 2 (Beginner) 
+
+Yo Ana, como jugadora principiante, quiero filtrar el Pokémon por tipo y debilidades, para elegir el mejor Pokémon en batalla.
+
+#### Criterios de aceptación:
+* El usuario podrá visualizar un menú de navegación que le brinde la opción de filtrar por tipo y debilidades.
+	
+#### Definición de terminado:
+* El código de la función “Filter Data” pasa los test.
+
+### Historia de usuario 3 (Intermediate)
+
+Yo Pedro, como jugador nivel intermedio, quiero ordenar los Pokémon por su nombre de forma ascendente y descendente, además de buscar por nombre.
+
+#### Criterios de aceptación:
+* El usuario podrá ordenar los Pokémon de forma ascendente y descendente de acuerdo a sus nombres.
+* El usuario podrá buscar el nombre del Pokémon específicamente.
+
+#### Definición de terminado:
+* Tener un menú en la parte superior de las tarjetas con la opción para ordenar.
+* El usuario encontrará el input para buscar en la parte superior de las tarjetas.
+* El código de la función “Sort Data” pasa los test.
+* El código de la función “Search Filter” pasa los test.
+
+### Historia de usuario 4 (Master)
+
+Yo Magdalena, necesito saber el chance de aparición de los diferentes Pokémon por su tipo.
+
+#### Criterios de aceptación:
+* El usuario al filtrar por tipo los Pokémon podrá visualizar el promedio de aparición.
+
+#### Definición de terminado:
+* Que la función “Compute” pase los test.
+* Tener un mensaje con el promedio por cada tipo.
 
 
 ## 3. Prototipos de baja fidelidad
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+* Prototipo desktop
+
+En el primer prototipo, decidimos que al entrar al sitio web, los usuarios podrán ver los Pokémon disponibles. Además, implementamos dos tipos de menús para facilitar la navegación:
+
+**Menú lateral de filtrado:** Los usuarios pueden utilizar este menú para filtrar los Pokémon según diferentes criterios, como tipo y debilidades. Esto les permite encontrar rápidamente Pokémon específicos que se ajusten a sus necesidades o preferencias.
+
+**Menú superior de ordenación:** También hemos incluido un menú en la parte superior de la página que permite a los usuarios ordenar los Pokémon en función de diferentes criterios. Esto les brinda la posibilidad de organizar la lista de Pokémon de acuerdo a sus preferencias, ya sea en orden alfabético ascendente o descendente.
+
+![prototipo-desktop](src\assets\Prototipo-Baja.png)
+
+* Prototipo móvil
+
+En la versión móvil, al ingresar al sitio web, los usuarios son recibidos con una pantalla de bienvenida que incluye un botón para acceder a la sección con todos los Pokémon. Una vez en esta sección, en la parte superior de la página, los usuarios encontrarán los menús de filtrado y ordenación, junto con una barra de búsqueda.
+
+![prototipo-móvil](src\assets\Prototipo-Baja-Móvil.png)
 
 
 ## 4. Prototipos de alta fidelidad
 
-* Este proyecto se debe resolver en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 3 a 4 Sprints.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
+* Prototipo de alta desktop
+
+![prototipo-alta-desktop](src\assets\alta-desktop.png)
+
+* Prototipo de alta móvil 
+
+![prototipo-baja-movil](src\assets\alta-movil.png)
+
+* Los prototipos de alta fidelidad se encuentran en [Figma](https://www.figma.com/proto/T8V1bKQldSdh1GO2vHcCWA/pokemon?type=design&node-id=376-2&t=NQXoMPBl1GhysjkZ-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=10%3A55&show-proto-sidebar=1).
+
 
 ## 5. Resultados de test de usabilidad
 
-Los criterios para considerar que has completado este proyecto son:
+Para realizar los tests de usabilidad, se usó la página real. Esto nos permitió evaluar la experiencia del usuario con la versión funcional del sitio web de Pokémon. Al trabajar con la página real, pudimos obtener retroalimentación más precisa y relevante, ya que los participantes interactuaron con las características y funcionalidades reales del sitio.
 
-### Definición del producto
+El objetivo del test de usabilidad fue evaluar la facilidad de uso y la experiencia del usuario en nuestro sitio web de Pokémon. Durante el test, se le pidió a un grupo de participantes que realizaran una serie de tareas específicas, como buscar un Pokémon por su nombre, filtrar los Pokémon por tipo y debilidades, y ordenarlos alfabéticamente. Se observaron y registraron las interacciones de los participantes, así como sus comentarios y retroalimentación.
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
-
-### Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
-
-### Diseño de la Interfaz de Usuario
-
-#### Prototipo de baja fidelidad
-
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
-
-#### Prototipo de alta fidelidad
-
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
-#### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
-
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
-
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
-
-Como mínimo, tu implementación debe:
-
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
-
-### Pruebas unitarias
-
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
-
-## 6. Conclusión
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-Features/características extra sugeridas:
-
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como
-  [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
+Los resultados del test de usabilidad revelaron que la mayoría de los participantes encontraron el sitio web intuitivo y fácil de usar. Sin embargo, se recibieron comentarios sobre la necesidad de proporcionar más información sobre los Pokémon en las tarjetas de visualización.
