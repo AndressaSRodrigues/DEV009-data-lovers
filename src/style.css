@@ -656,7 +656,6 @@ main {
         padding: 40px 40px 0 40px;
     }
 
-
     .process-data {
         display: flex;
         flex-direction: column;
@@ -785,5 +784,11 @@ main {
 
     #modal-content img {
         width: 90px;
+    }
+
+    .scroll-up {
+        width: 14vw;
+        height: 8vh;
+        font-size: 2rem;
     }
 }
