@@ -7,7 +7,7 @@
 * [3. Prototipos de baja fidelidad](#3-prototipos-de-baja-fidelidad)
 * [4. Prototipos de alta fidelidad](#4-prototipos-de-alta-fidelidad)
 * [5. Resultados test de usabilidad](#5-resultados-de-test-de-usabilidad)
-* [6. Conclusión](#conclusion)
+* [6. Contribuidores](#contribuidores)
  
 ***
 
@@ -23,6 +23,29 @@ Visualización de Pokémon: Los usuarios pueden explorar una amplia selección d
 * Orden alfabético: Los Pokémon se pueden ordenar de forma ascendente y descendente según sus nombres, lo que facilita la búsqueda y comparación de diferentes especies.
 
 * Búsqueda por nombre: Los usuarios pueden utilizar la función de búsqueda para encontrar rápidamente un Pokémon específico ingresando su nombre.
+
+### Diseño
+
+#### Paleta de Colores
+
+Aqui está la paleta de colores utilizada en el proyecto
+
+![paleta-de-colores](read-img/paleta-colores.png)
+
+#### Tipografía
+
+En este proyecto, utilizamos la siguiente tipografía:
+
+- Encabezados: Press Start 2P
+- Texto principal: Raleway
+
+### Iconografía
+
+En este proyecto, utilizamos una combinación de iconos personalizados y la biblioteca de iconos Google Fonts.
+
+Algunos ejemplos de iconos utilizados incluyen:
+
+- Icono de búsqueda: ![Icono de busqueda](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:search:FILL@0;wght@400;GRAD@0;opsz@48)
 
 ### Público objetivo
 El sitio web está dirigido a personas aficionadas a Pokémon y a aquellos que disfrutan jugar en línea a través de sus dispositivos móviles y ordenadores. Desde nuevos jugadores que desean aprender sobre los Pokémon hasta jugadores experimentados que buscan información detallada para tomar decisiones estratégicas, el sitio web ofrece un recurso valioso para todos los niveles de experiencia.
@@ -120,9 +143,9 @@ Para realizar los tests de usabilidad, se usó la página real. Esto nos permiti
 
 El objetivo del test de usabilidad fue evaluar la facilidad de uso y la experiencia del usuario en nuestro sitio web de Pokémon. Durante el test, se le pidió a un grupo de participantes que realizaran una serie de tareas específicas, como buscar un Pokémon por su nombre, filtrar los Pokémon por tipo y debilidades, y ordenarlos alfabéticamente. Se observaron y registraron las interacciones de los participantes, así como sus comentarios y retroalimentación.
 
-### Metodologia
+### Metodologia del test de usabilidad
 
-Utilizamos la herramienta **Jotform** para llevar a cabo el proceso de prueba. Hemos creado un formulario titulado "Test Pokémon Lovers" que se puede encontrar en el siguiente enlace: [Test Pokémon Lovers](https://form.jotform.com/231796850498675)
+En nuestra búsqueda por evaluar la experiencia del usuario utilizamos la herramienta **Jotform**.El formulario titulado "Test Pokémon Lovers" se puede visitar a través del siguiente enlace: [Test Pokémon Lovers](https://form.jotform.com/231796850498675)
 
 ### Preguntas realizadas
 
@@ -139,3 +162,7 @@ Los resultados del test de usabilidad revelaron que la mayoría de los participa
 ![reporte-test-usabilidad](read-img/reporte-test-usabilidad.png)
 [Reporte completo](https://www.jotform.com/report/23179653489006429)
 
+## 6. Contribuidores
+
+- [@AndressaSRodrigues](https://github.com/AndressaSRodrigues) - Desarrolladora
+- [@MafeOrostegui](https://github.com/MafeOrostegui) - Desarrolladora
