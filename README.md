@@ -137,5 +137,5 @@ Utilizamos la herramienta **Jotform** para llevar a cabo el proceso de prueba. H
 Los resultados del test de usabilidad revelaron que la mayoría de los participantes encontraron el sitio web intuitivo y fácil de usar. Sin embargo, se recibieron comentarios sobre la necesidad de proporcionar más información sobre los Pokémon en las tarjetas de visualización. A continuación se encuentra la gráfica de las respuestas correspondientes y el link del reporte completo.
 
 ![reporte-test-usabilidad](read-img/reporte-test-usabilidad.png)
-[Reporte completo](https://form.jotform.com/231796850498675)
+[Reporte completo](https://www.jotform.com/report/23179653489006429)
 
