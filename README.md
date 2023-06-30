@@ -92,24 +92,24 @@ En el primer prototipo, decidimos que al entrar al sitio web, los usuarios podr�
 
 **Menú superior de ordenación:** También hemos incluido un menú en la parte superior de la página que permite a los usuarios ordenar los Pokémon en función de diferentes criterios. Esto les brinda la posibilidad de organizar la lista de Pokémon de acuerdo a sus preferencias, ya sea en orden alfabético ascendente o descendente.
 
-![prototipo-desktop](read-img\Prototipo-Baja.png)
+![prototipo-desktop](read-img/Prototipo-Baja.png)
 
 * Prototipo móvil
 
 En la versión móvil, al ingresar al sitio web, los usuarios son recibidos con una pantalla de bienvenida que incluye un botón para acceder a la sección con todos los Pokémon. Una vez en esta sección, en la parte superior de la página, los usuarios encontrarán los menús de filtrado y ordenación, junto con una barra de búsqueda.
 
-![prototipo-móvil](read-img\Prototipo-Baja-Móvil.png)
+![prototipo-móvil](read-img/Prototipo-Baja-Móvil.png)
 
 
 ## 4. Prototipos de alta fidelidad
 
 * Prototipo de alta desktop
 
-![prototipo-alta-desktop](read-img\alta-desktop.png)
+![prototipo-alta-desktop](read-img/alta-desktop.png)
 
 * Prototipo de alta móvil 
 
-![prototipo-alta-movil](read-img\alta-movil.png)
+![prototipo-alta-movil](read-img/alta-movil.png)
 
 * Los prototipos de alta fidelidad se encuentran en [Figma](https://www.figma.com/proto/T8V1bKQldSdh1GO2vHcCWA/pokemon?type=design&node-id=431-87&t=xtNfN9Ti9PuCTVeA-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=431%3A87&show-proto-sidebar=1&mode=design).
 
@@ -136,6 +136,6 @@ Utilizamos la herramienta **Jotform** para llevar a cabo el proceso de prueba. H
 
 Los resultados del test de usabilidad revelaron que la mayoría de los participantes encontraron el sitio web intuitivo y fácil de usar. Sin embargo, se recibieron comentarios sobre la necesidad de proporcionar más información sobre los Pokémon en las tarjetas de visualización. A continuación se encuentra la gráfica de las respuestas correspondientes y el link del reporte completo.
 
-![reporte-test-usabilidad](read-img\reporte-test-usabilidad.png)
+![reporte-test-usabilidad](read-img/reporte-test-usabilidad.png)
 [Reporte completo](https://form.jotform.com/231796850498675)
 
