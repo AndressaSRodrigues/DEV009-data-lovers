@@ -105,13 +105,13 @@ En la versión móvil, al ingresar al sitio web, los usuarios son recibidos con 
 
 * Prototipo de alta desktop
 
-![prototipo-alta-desktop](.src\assets\alta-desktop.png)
+![prototipo-alta-desktop](read-img\alta-desktop.png)
 
 * Prototipo de alta móvil 
 
 ![prototipo-alta-movil](read-img\alta-movil.png)
 
-* Los prototipos de alta fidelidad se encuentran en [Figma](https://www.figma.com/proto/T8V1bKQldSdh1GO2vHcCWA/pokemon?type=design&node-id=376-2&t=NQXoMPBl1GhysjkZ-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=10%3A55&show-proto-sidebar=1).
+* Los prototipos de alta fidelidad se encuentran en [Figma](https://www.figma.com/proto/T8V1bKQldSdh1GO2vHcCWA/pokemon?type=design&node-id=431-87&t=xtNfN9Ti9PuCTVeA-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=431%3A87&show-proto-sidebar=1&mode=design).
 
 
 ## 5. Resultados de test de usabilidad
@@ -120,4 +120,22 @@ Para realizar los tests de usabilidad, se usó la página real. Esto nos permiti
 
 El objetivo del test de usabilidad fue evaluar la facilidad de uso y la experiencia del usuario en nuestro sitio web de Pokémon. Durante el test, se le pidió a un grupo de participantes que realizaran una serie de tareas específicas, como buscar un Pokémon por su nombre, filtrar los Pokémon por tipo y debilidades, y ordenarlos alfabéticamente. Se observaron y registraron las interacciones de los participantes, así como sus comentarios y retroalimentación.
 
-Los resultados del test de usabilidad revelaron que la mayoría de los participantes encontraron el sitio web intuitivo y fácil de usar. Sin embargo, se recibieron comentarios sobre la necesidad de proporcionar más información sobre los Pokémon en las tarjetas de visualización.
+### Metodologia
+
+Utilizamos la herramienta **Jotform** para llevar a cabo el proceso de prueba. Hemos creado un formulario titulado "Test Pokémon Lovers" que se puede encontrar en el siguiente enlace: [Test Pokémon Lovers](https://form.jotform.com/231796850498675)
+
+### Preguntas realizadas
+
+* ¿Cómo fue acceder a la información con todos los Pokémon?
+* ¿Cómo fue buscar el Pokémon que deseabas ver?
+* ¿Cómo fue filtrar el Pokémon por su tipo?
+* ¿Cómo fue filtrar el Pokémon por sus debilidades?
+* ¿Cómo fue ordenar los Pokémon?
+* ¿Cómo fue encontrar más información de los Pokémon?
+* ¿Cómo fue volver al inicio?
+
+Los resultados del test de usabilidad revelaron que la mayoría de los participantes encontraron el sitio web intuitivo y fácil de usar. Sin embargo, se recibieron comentarios sobre la necesidad de proporcionar más información sobre los Pokémon en las tarjetas de visualización. A continuación se encuentra la gráfica de las respuestas correspondientes y el link del reporte completo.
+
+![reporte-test-usabilidad](read-img\reporte-test-usabilidad.png)
+[Reporte completo](https://form.jotform.com/231796850498675)
+
