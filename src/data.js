@@ -20,13 +20,13 @@ export const sortData=(data, sortBy, sortOrder)=>{
   const sortedData=[...data]
   if(sortOrder==="AZ"){
     sortedData.sort((a,b)=> a[sortBy].localeCompare(b[sortBy]));
-  }else {
+  } else {
     sortedData.sort((a,b)=> b[sortBy].localeCompare(a[sortBy]));
   }
   return sortedData;
 };
 
-export const computedData=(data) => {
+export const computedData= (data) => {
   const spawnChance = data.map(pokemon => pokemon['spawn-chance']),
     eachSpawnValue = (Object.values(spawnChance));
 

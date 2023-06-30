@@ -11,7 +11,8 @@ const testData = [
 describe('filterType', () => {
   it('is a function', () => {
     expect(typeof filterType).toBe('function');
-  }); 
+  });
+  
   it('should return only the Pokemon with the specified type', () => {
     const filteredData = filterType(testData, 'grass');
     expect(filteredData[0,1].type).toContain('grass');

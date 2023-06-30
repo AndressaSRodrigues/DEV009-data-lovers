@@ -5,8 +5,6 @@ html {
 
 body {
     margin: 0;
-    display: grid;
-    grid-template-rows: 1;
     background-image: url(assets/My\ project-4.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,7 +12,6 @@ body {
 }
 
 header {
-    grid-row: 1/2;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -42,7 +39,6 @@ header nav h3 a {
 }
 
 main {
-    grid-row: 2/3;
     height: 100vh;
 }
 
@@ -71,7 +67,7 @@ main {
 
 .options-welcome {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .options-welcome button {
@@ -103,7 +99,7 @@ main {
 
 .process-data {
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     background-color: white;
     padding-top: 30px;
 }
@@ -144,9 +140,8 @@ main {
 }
 
 #container-pokemon {
-    flex: 3;
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     justify-content: center;
     padding-top: 30px;
 }
@@ -280,7 +275,7 @@ main {
 .type-style {
     color:white;
     padding: 10px;
-    text-align:start;
+    text-align: start;
     text-shadow: 1px 1px 2px #0E1F40;
 }
 
@@ -338,15 +333,15 @@ main {
 }
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 1; 
+    z-index: 1;
     padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; 
+    overflow: auto;
     background-color: rgba(0,0,0,0.4);
     backdrop-filter: blur(2px);
 }
@@ -387,7 +382,7 @@ main {
     align-self: flex-start;
     align-items: end;
   }
-  
+ 
   .close:hover,
   .close:focus {
     color: #000;
@@ -428,8 +423,7 @@ main {
         background-position-y: 15%;
         background-position-x: 25%;
     }
-  
-    
+ 
     header {
         display: flex;
         justify-content: center;
@@ -445,9 +439,8 @@ main {
 
     header nav {
         display: none;
-    } 
+    }
 
-    
     .welcome {
         color: #F2B807;
         height: 100vh;
@@ -514,7 +507,6 @@ main {
         line-height: 50px;
     }
 
-
     #display-filter {
         order: 2;
         z-index: 999;
@@ -562,7 +554,6 @@ main {
     }
 
     #container-pokemon {
-        order: 4;
         flex-direction: row;
         margin: 0 auto;
     }
@@ -575,7 +566,7 @@ main {
         font-size: 18px;
         padding-top: 10px;
     }
-    
+   
     .modal {
         z-index: 999;
     }
@@ -603,7 +594,7 @@ main {
         background-position-y: 15%;
         background-position-x: 25%;
     }
-  
+ 
     header {
         display: flex;
         justify-content: center;
@@ -619,7 +610,7 @@ main {
 
     header nav {
         display: none;
-    } 
+    }
 
     .welcome {
         display: flex;
@@ -665,8 +656,6 @@ main {
 
     .search {
         order: 1;
-        display: flex;
-        justify-content: space-around;
     }
 
     #search {
@@ -754,7 +743,6 @@ main {
     }
 
     #container-pokemon {
-        order: 4;
         flex-direction: column;
         margin: 0 auto;
     }
@@ -767,7 +755,7 @@ main {
         font-size: 14px;
         padding-top: 10px;
     }
-    
+   
     .modal {
         z-index: 999;
     }

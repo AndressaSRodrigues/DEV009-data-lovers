@@ -19,19 +19,26 @@ function addElement(importedData){
   for(const pokemon of importedData) {
     
     const pokemonCard=document.createElement('div'),
+
       namePokemon=pokemon['name'],
       cardName=document.createTextNode(namePokemon[0].toUpperCase()+namePokemon.substring(1)),
+
       cardTypeArray=pokemon['type'].join( ", "),
       cardType=document.createTextNode(cardTypeArray[0].toUpperCase()+cardTypeArray.substring(1)),
+
       cardNameStyle=document.createElement('span'),
       cardTypeStyle=document.createElement('span'),
+
       cardImage=document.createElement('img');
 
     cardImage.setAttribute("src", pokemon['img']);
     cardImage.classList.add("images");
+
     pokemonCard.classList.add("box");
+
     cardNameStyle.classList.add("name-style");
     cardTypeStyle.classList.add("type-style");
+
     pokemonCard.classList.add(pokemon['type'][0]);
     
     pokemonCard.appendChild(cardNameStyle);
@@ -54,6 +61,7 @@ function addElement(importedData){
       <b>Stats</b><br>${statsInfo}`;
 
       document.getElementById('modal-image').src = pokemon['img'];
+
       const modalContent = document.getElementById('modal-content');
       modalContent.className = '';
       modalContent.classList.add(pokemon['type'][0]);
@@ -82,7 +90,7 @@ filterTypes.addEventListener('change', () => {
     spawnMessage.innerHTML=" ";
   } else {
     addElement(filterType(pokemonData, filterTypes.value));
-    const averageSpawn=computedData(filterType(pokemonData, filterTypes.value)),
+    const averageSpawn= computedData(filterType(pokemonData, filterTypes.value)),
       spawnMessage=document.getElementById('spawn-message');
     spawnMessage.innerHTML=`The average spawn chance for this type is ${averageSpawn}`
   }
