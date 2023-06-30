@@ -5,8 +5,6 @@ html {
 
 body {
     margin: 0;
-    display: grid;
-    grid-template-rows: 1;
     background-image: url(assets/My\ project-4.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,7 +12,6 @@ body {
 }
 
 header {
-    grid-row: 1/2;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -42,7 +39,6 @@ header nav h3 a {
 }
 
 main {
-    grid-row: 2/3;
     height: 100vh;
 }
 
@@ -71,7 +67,7 @@ main {
 
 .options-welcome {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .options-welcome button {
@@ -103,7 +99,7 @@ main {
 
 .process-data {
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     background-color: white;
     padding-top: 30px;
 }
@@ -144,9 +140,8 @@ main {
 }
 
 #container-pokemon {
-    flex: 3;
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     justify-content: center;
     padding-top: 30px;
 }
@@ -280,7 +275,7 @@ main {
 .type-style {
     color:white;
     padding: 10px;
-    text-align:start;
+    text-align: start;
     text-shadow: 1px 1px 2px #0E1F40;
 }
 
@@ -429,7 +424,6 @@ main {
         background-position-x: 25%;
     }
   
-    
     header {
         display: flex;
         justify-content: center;
@@ -447,7 +441,6 @@ main {
         display: none;
     } 
 
-    
     .welcome {
         color: #F2B807;
         height: 100vh;
@@ -562,7 +555,6 @@ main {
     }
 
     #container-pokemon {
-        order: 4;
         flex-direction: row;
         margin: 0 auto;
     }
@@ -665,8 +657,6 @@ main {
 
     .search {
         order: 1;
-        display: flex;
-        justify-content: space-around;
     }
 
     #search {
@@ -754,7 +744,6 @@ main {
     }
 
     #container-pokemon {
-        order: 4;
         flex-direction: column;
         margin: 0 auto;
     }
