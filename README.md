@@ -45,7 +45,7 @@ En este proyecto, utilizamos una combinación de iconos personalizados y la bibl
 
 Algunos ejemplos de iconos utilizados incluyen:
 
-- Icono de búsqueda: ![Icono de busqueda](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:search:FILL@0;wght@400;GRAD@0;opsz@48)
+- Icono de búsqueda:[Icono de busqueda](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:search:FILL@0;wght@400;GRAD@0;opsz@48)
 
 ### Público objetivo
 El sitio web está dirigido a personas aficionadas a Pokémon y a aquellos que disfrutan jugar en línea a través de sus dispositivos móviles y ordenadores. Desde nuevos jugadores que desean aprender sobre los Pokémon hasta jugadores experimentados que buscan información detallada para tomar decisiones estratégicas, el sitio web ofrece un recurso valioso para todos los niveles de experiencia.
