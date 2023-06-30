@@ -41,7 +41,7 @@ Visualización de Pokémon: Los usuarios pueden explorar una amplia selección d
 Aqui está la paleta de colores utilizada en el proyecto
 
 
-![paleta-de-colores](read-img/paleta-colores.png)
+![paleta-de-colores](read-img/paleta-de-colores.png)
 
 
 #### Tipografía
